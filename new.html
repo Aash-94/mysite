@@ -1,0 +1,732 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Aash Doshi | Cybersecurity Professional</title>
+  <meta name="description" content="Aash Doshi - Cybersecurity professional with expertise in ethical hacking, strong passwords, OSINT, system management, and Wi-Fi security. Secure your digital future.">
+  <!-- Google Fonts for modern, clean typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free icons for accessibility & visual cues) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #0a0f1c;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* SKIP TO CONTENT LINK - accessibility first */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #0a2b3e;
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-weight: 600;
+      z-index: 100;
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus {
+      top: 0;
+      outline: 2px solid #ffcd3c;
+    }
+
+    /* MAIN LAYOUT */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      width: 100%;
+    }
+
+    /* ========== HEADER / NAVIGATION ========== */
+    .site-header {
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(0px);
+    }
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+      gap: 1rem;
+    }
+    .logo-area {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+    .logo-area a {
+      text-decoration: none;
+      color: #0f172a;
+      transition: color 0.2s;
+    }
+    .logo-area span {
+      color: #1e6f5c;
+      font-weight: 800;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1e293b;
+      transition: all 0.2s;
+      font-size: 1rem;
+      padding: 0.5rem 0;
+      border-bottom: 2px solid transparent;
+    }
+    .nav-links a:hover,
+    .nav-links a:focus {
+      color: #1e6f5c;
+      border-bottom-color: #1e6f5c;
+      outline: none;
+    }
+    .nav-links a.active-page {
+      color: #1e6f5c;
+      border-bottom-color: #1e6f5c;
+    }
+
+    /* MAIN CONTENT */
+    main {
+      flex: 1;
+      padding: 3rem 0 4rem;
+    }
+    /* Hero Section (home) */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+    .hero-content {
+      flex: 1.2;
+      min-width: 260px;
+    }
+    .hero-badge {
+      background: #e2f0ed;
+      color: #1e6f5c;
+      display: inline-block;
+      padding: 0.3rem 0.9rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      margin-bottom: 1.2rem;
+    }
+    .hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      margin-bottom: 0.75rem;
+    }
+    .hero-sub {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #2c3e66;
+      margin-bottom: 1rem;
+    }
+    .hero-desc {
+      font-size: 1.1rem;
+      color: #334155;
+      max-width: 550px;
+      margin: 1.25rem 0 1.8rem;
+    }
+    .highlight-list {
+      background: #ffffffd9;
+      border-left: 4px solid #1e6f5c;
+      padding: 0.8rem 1.2rem;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .highlight-list p {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .highlight-list ul {
+      padding-left: 1.4rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .highlight-list li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .btn-primary {
+      background: #1e6f5c;
+      color: white;
+      box-shadow: 0 2px 6px rgba(30,111,92,0.3);
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background: #0e5444;
+      transform: translateY(-2px);
+      outline: 2px solid #ffcd3c;
+      outline-offset: 2px;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #1e6f5c;
+      color: #1e6f5c;
+    }
+    .btn-outline:hover,
+    .btn-outline:focus {
+      background: #e2f0ed;
+      transform: translateY(-2px);
+    }
+    .hero-visual {
+      flex: 0.9;
+      background: linear-gradient(135deg, #e0f2f0 0%, #c8e6e2 100%);
+      border-radius: 40px;
+      padding: 2rem;
+      text-align: center;
+      min-width: 240px;
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+    }
+    .shield-icon {
+      font-size: 5rem;
+      color: #1e6f5c;
+      margin-bottom: 1rem;
+    }
+    .hero-visual p {
+      font-weight: 500;
+      color: #0f172a;
+    }
+
+    /* Section styling (generic) */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60%;
+      height: 3px;
+      background: #1e6f5c;
+      border-radius: 3px;
+    }
+
+    /* About page styling - enhanced expertise grid */
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+    .about-text {
+      flex: 2;
+    }
+    .about-text p {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+      color: #1f2a44;
+    }
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 0.9rem;
+      margin: 1.8rem 0 1.2rem;
+    }
+    .expertise-item {
+      background: #f1f5f9;
+      border-radius: 40px;
+      padding: 0.65rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: all 0.2s;
+      border-left: 3px solid #1e6f5c;
+    }
+    .expertise-item i {
+      color: #1e6f5c;
+      font-size: 1.2rem;
+      width: 28px;
+      text-align: center;
+    }
+    .cert-badge {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      flex: 1;
+      min-width: 220px;
+    }
+    .cert-badge i {
+      font-size: 2.5rem;
+      color: #1e6f5c;
+    }
+    .skill-tag {
+      background: #eef2ff;
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      display: inline-block;
+      margin: 0.25rem;
+      font-size: 0.85rem;
+    }
+    .wifi-highlight {
+      background: #e0f2fe;
+      border-left: 4px solid #0284c7;
+      padding: 1rem;
+      border-radius: 20px;
+      margin-top: 1.2rem;
+    }
+
+    /* Services page cards */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .service-card {
+      background: white;
+      border-radius: 28px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.08);
+      transition: all 0.2s;
+      border: 1px solid #e2e8f0;
+    }
+    .service-card i {
+      font-size: 2.4rem;
+      color: #1e6f5c;
+      margin-bottom: 1rem;
+    }
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .service-card p {
+      color: #475569;
+    }
+
+    /* Contact page - only Secure Communication left */
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      background: white;
+      border-radius: 32px;
+      padding: 2rem;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+    }
+    .contact-info {
+      flex: 1;
+    }
+    .contact-info i {
+      width: 2rem;
+      color: #1e6f5c;
+    }
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .contact-detail a {
+      color: #1e293b;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-detail a:hover {
+      color: #1e6f5c;
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 2rem 0;
+      text-align: center;
+      margin-top: auto;
+    }
+    .footer p {
+      margin: 0.3rem 0;
+    }
+
+    /* responsive */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        gap: 1.2rem;
+      }
+      .hero-content h1 {
+        font-size: 2.3rem;
+      }
+      .hero-sub {
+        font-size: 1.2rem;
+      }
+      .container {
+        padding: 0 1.5rem;
+      }
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo-area">
+          <a href="index.html" aria-label="Homepage - Aash Doshi Cybersecurity">AASH<span>DOSHI</span></a>
+        </div>
+        <nav aria-label="Main navigation">
+          <ul class="nav-links" role="list">
+            <li><a href="index.html" id="nav-home" aria-current="page">HOME</a></li>
+            <li><a href="about.html" id="nav-about">ABOUT</a></li>
+            <li><a href="services.html" id="nav-services">SERVICES</a></li>
+            <li><a href="contact.html" id="nav-contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <div class="container" id="page-container">
+      <!-- dynamic content injected via JS -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Aash Doshi — Cybersecurity Professional. Securing digital assets with integrity.</p>
+      <p>⚡ Strong passwords | Ethical Hacking | OSINT | System Management | Proactive Defense</p>
+    </div>
+  </footer>
+
+  <script>
+    // Multi-page accessible SPA with history API, focus management, ARIA updates.
+    // Updated Contact page: changed email to aashdoshi0@gmail.com, phone to 8141722064, LinkedIn to www.linkedin.com/in/aashu-doshi-3993a4321
+    const pages = {
+      home: {
+        title: "Aash Doshi | Cybersecurity Professional",
+        content: `
+          <div class="hero">
+            <div class="hero-content">
+              <div class="hero-badge"><i class="fas fa-shield-alt"></i> Trusted Cybersecurity Expert</div>
+              <h1>AASH DOSHI</h1>
+              <div class="hero-sub">CYBERSECURITY PROFESSIONAL</div>
+              <div class="hero-desc">
+                With expertise in securing digital assets, including Ethical Hacking completed in 2015. Specially proficient in <strong>CREATING STRONG PASSWORDS</strong>.
+              </div>
+              <div class="highlight-list">
+                <p><i class="fas fa-key"></i> Core proficiencies:</p>
+                <ul>
+                  <li><i class="fas fa-check-circle"></i> Ethical Hacking (2015)</li>
+                  <li><i class="fas fa-lock"></i> Strong Password Architecture</li>
+                  <li><i class="fas fa-network-wired"></i> Threat Mitigation</li>
+                  <li><i class="fas fa-search"></i> OSINT & Intelligence</li>
+                  <li><i class="fas fa-wrench"></i> Full System Management</li>
+                </ul>
+              </div>
+              <div class="btn-group">
+                <a href="#" class="btn btn-primary" data-page="about">LEARN MORE</a>
+                <a href="#" class="btn btn-outline" data-page="contact">Secure Your Future →</a>
+              </div>
+            </div>
+            <div class="hero-visual">
+              <div class="shield-icon"><i class="fas fa-shield-haltered"></i></div>
+              <p>Zero Trust · Cyber Resilience · OSINT · Full IT Management</p>
+              <small>Certified since 2015</small>
+            </div>
+          </div>
+          <section aria-labelledby="secure-future">
+            <h2 id="secure-future" class="section-title">Secure Your Future</h2>
+            <p style="margin-top: 1rem;">Empower your digital life with next-gen cybersecurity strategies and comprehensive system management. From advanced password policies to ethical hacking assessments and OSINT investigations, Aash Doshi delivers enterprise-grade security with a personal touch.</p>
+          </section>
+        `
+      },
+      about: {
+        title: "About Aash Doshi | Cybersecurity & IT Expert",
+        content: `
+          <h1 class="section-title">About Me</h1>
+          <div class="about-grid">
+            <div class="about-text">
+              <p>I'm <strong>Aash Doshi</strong>, a dedicated cybersecurity professional with over a decade of hands-on experience in protecting digital ecosystems. My journey started with a passion for ethical hacking, and I officially completed my <strong>Ethical Hacking certification in 2015</strong>, which laid the foundation for a career focused on proactive defense.</p>
+              <p>Today, I specialize in designing robust security frameworks, with a particular emphasis on <strong>creating strong, unbreakable passwords</strong> and implementing multi-layered authentication protocols. I believe that cybersecurity is not just about technology — it’s about empowering people and organizations to stay safe in a connected world.</p>
+              <p>Beyond security, I bring deep technical expertise across multiple domains to ensure complete system reliability and performance:</p>
+              
+              <div class="expertise-grid">
+                <div class="expertise-item"><i class="fas fa-wifi"></i> Expert in troubleshooting routers</div>
+                <div class="expertise-item"><i class="fab fa-linux"></i> Expert in Linux systems management</div>
+                <div class="expertise-item"><i class="fas fa-globe"></i> Expert in internet connectivity</div>
+                <div class="expertise-item"><i class="fas fa-desktop"></i> Expert in computer issues</div>
+                <div class="expertise-item"><i class="fas fa-hdd"></i> Expert in formatting</div>
+                <div class="expertise-item"><i class="fas fa-database"></i> Expert in backups</div>
+                <div class="expertise-item"><i class="fas fa-trash-restore"></i> Expert in recovering deleted data</div>
+                <div class="expertise-item"><i class="fas fa-search"></i> Expert in OSINT tools and open source intelligence</div>
+              </div>
+              
+              <div class="wifi-highlight">
+                <i class="fas fa-shield-alt" style="color:#1e6f5c; margin-right: 8px;"></i> 
+                <strong>Proficient in creating and checking strong Wi-Fi security</strong> — ensuring your wireless networks are encrypted, monitored, and resistant to intrusions.
+              </div>
+              
+              <p style="margin-top: 1.2rem;">I have collaborated with fintech startups, healthcare providers, and educational institutions to reduce vulnerabilities and respond to emerging threats. My approach combines rigorous testing, system optimization, user education, OSINT gathering, and continuous improvement to deliver holistic digital protection.</p>
+              <div style="margin-top: 1rem;">
+                <span class="skill-tag"><i class="fas fa-bug"></i> Pen Testing</span>
+                <span class="skill-tag"><i class="fas fa-fingerprint"></i> Identity Management</span>
+                <span class="skill-tag"><i class="fas fa-database"></i> Data Protection</span>
+                <span class="skill-tag"><i class="fas fa-shield-virus"></i> Ransomware Defense</span>
+                <span class="skill-tag"><i class="fas fa-search"></i> OSINT Analysis</span>
+                <span class="skill-tag"><i class="fas fa-network-wired"></i> Network Diagnostics</span>
+                <span class="skill-tag"><i class="fas fa-lock"></i> Wi-Fi Security Audits</span>
+                <span class="skill-tag"><i class="fas fa-tachometer-alt"></i> System Optimization</span>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <i class="fas fa-certificate"></i>
+              <h3>Credentials & Expertise</h3>
+              <ul style="margin-top: 0.8rem; list-style: none; padding-left: 0;">
+                <li>✔ Certified Ethical Hacker (CEH) - 2015</li>
+                <li>✔ CompTIA Security+</li>
+                <li>✔ Linux System Administrator (LPIC)</li>
+                <li>✔ Password Security Architect</li>
+                <li>✔ OSINT Practitioner</li>
+                <li>✔ Wi-Fi Security Pro (WPA3, 802.1X)</li>
+                <li>✔ Data Recovery Specialist</li>
+              </ul>
+              <p style="margin-top: 1rem;"><i class="fas fa-calendar-alt"></i> Active since 2012</p>
+              <hr style="margin: 1rem 0;">
+              <p><i class="fas fa-microchip"></i> <strong>Technical toolkit:</strong> Advanced diagnostics, router configuration, Linux environments, backup automation, forensic recovery tools, OSINT frameworks, and wireless security assessment.</p>
+            </div>
+          </div>
+        `
+      },
+      services: {
+        title: "Cybersecurity Services | Aash Doshi",
+        content: `
+          <h1 class="section-title">What I Offer</h1>
+          <div class="services-grid">
+            <div class="service-card">
+              <i class="fas fa-key"></i>
+              <h3>Strong Password Engineering</h3>
+              <p>Advanced password generation, policy design, and password manager integration. Eliminate credential-based breaches.</p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-skull-crosswalk"></i>
+              <h3>Ethical Hacking</h3>
+              <p>Full-scope penetration testing, vulnerability assessment, and red team exercises (certified since 2015).</p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-search"></i>
+              <h3>OSINT Investigations</h3>
+              <p>Open Source Intelligence gathering, threat actor profiling, digital footprint analysis, and intelligence-driven defense strategies.</p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-wifi"></i>
+              <h3>Router & Connectivity</h3>
+              <p>Expert troubleshooting for routers, internet connectivity issues, and Linux-based network management. Ensure stable, high-performance connections.</p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-laptop-code"></i>
+              <h3>Computer & System Care</h3>
+              <p>Resolve computer issues, perform secure formatting, manage automated backups, and recover deleted data with professional tools.</p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Wi-Fi Security Hardening</h3>
+              <p>Creation & rigorous checking of strong Wi-Fi security (WPA3, rogue AP detection, encryption audits). Keep your wireless network impenetrable.</p>
+            </div>
+            <div class="service-card">
+              <i class="fas fa-chalkboard-user"></i>
+              <h3>Security Awareness Training</h3>
+              <p>Workshops on phishing resistance, safe browsing, OSINT risks, and building a security-first culture in your team.</p>
+            </div>
+          </div>
+          <div class="highlight-list" style="margin-top: 2rem; background: #eef2ff;">
+            <p><i class="fas fa-star-of-life"></i> Special focus: <strong>"Creating Strong Passwords", "OSINT Intelligence", & "Complete System Management"</strong> — combining cybersecurity with holistic IT reliability.</p>
+          </div>
+        `
+      },
+      contact: {
+        title: "Contact Aash Doshi | Get in Touch",
+        // Updated with new contact information: email, phone, LinkedIn
+        content: `
+          <h1 class="section-title">Let's Connect</h1>
+          <div class="contact-wrapper">
+            <div class="contact-info">
+              <h3><i class="fas fa-envelope"></i> Secure Communication</h3>
+              <div class="contact-detail">
+                <i class="fas fa-user-circle fa-2x"></i>
+                <div><strong>Aash Doshi</strong><br>Cybersecurity & IT Professional</div>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-envelope"></i>
+                <div><strong>Email</strong><br><a href="mailto:aashdoshi0@gmail.com">aashdoshi0@gmail.com</a></div>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-phone-alt"></i>
+                <div><strong>Phone</strong><br><a href="tel:+918141722064">+91 81417 22064</a></div>
+              </div>
+              <div class="contact-detail">
+                <i class="fab fa-linkedin"></i>
+                <div><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/aashu-doshi-3993a4321" target="_blank" rel="noopener noreferrer">linkedin.com/in/aashu-doshi-3993a4321</a></div>
+              </div>
+            </div>
+          </div>
+        `
+      }
+    };
+
+    let currentPage = 'home';
+
+    function updateActiveNav(pageId) {
+      const navLinks = {
+        home: document.getElementById('nav-home'),
+        about: document.getElementById('nav-about'),
+        services: document.getElementById('nav-services'),
+        contact: document.getElementById('nav-contact')
+      };
+      Object.keys(navLinks).forEach(key => {
+        if (navLinks[key]) {
+          if (key === pageId) {
+            navLinks[key].classList.add('active-page');
+            navLinks[key].setAttribute('aria-current', 'page');
+          } else {
+            navLinks[key].classList.remove('active-page');
+            navLinks[key].removeAttribute('aria-current');
+          }
+        }
+      });
+    }
+
+    function renderPage(pageId, pushState = true) {
+      const page = pages[pageId];
+      if (!page) return;
+      const container = document.getElementById('page-container');
+      if (container) {
+        container.innerHTML = page.content;
+        document.title = page.title;
+        updateActiveNav(pageId);
+        const internalLinks = document.querySelectorAll('[data-page]');
+        internalLinks.forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetPage = link.getAttribute('data-page');
+            if (targetPage && pages[targetPage]) {
+              navigateTo(targetPage);
+            }
+          });
+        });
+        const mainEl = document.getElementById('main-content');
+        if (mainEl) mainEl.focus();
+        if (pushState) {
+          const newUrl = `/${pageId === 'home' ? '' : pageId}.html`;
+          window.history.pushState({ page: pageId }, page.title, newUrl);
+        }
+      }
+    }
+
+    function navigateTo(pageId) {
+      if (pages[pageId]) {
+        currentPage = pageId;
+        renderPage(pageId, true);
+      }
+    }
+
+    window.addEventListener('popstate', (event) => {
+      const state = event.state;
+      if (state && state.page && pages[state.page]) {
+        currentPage = state.page;
+        renderPage(currentPage, false);
+      } else {
+        const path = window.location.pathname;
+        if (path.includes('about')) navigateTo('about');
+        else if (path.includes('services')) navigateTo('services');
+        else if (path.includes('contact')) navigateTo('contact');
+        else navigateTo('home');
+      }
+    });
+
+    function initialLoad() {
+      const path = window.location.pathname;
+      if (path.includes('about')) currentPage = 'about';
+      else if (path.includes('services')) currentPage = 'services';
+      else if (path.includes('contact')) currentPage = 'contact';
+      else currentPage = 'home';
+      renderPage(currentPage, false);
+      document.querySelectorAll('.nav-links a').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+          e.preventDefault();
+          let href = anchor.getAttribute('href');
+          if (href.includes('about')) navigateTo('about');
+          else if (href.includes('services')) navigateTo('services');
+          else if (href.includes('contact')) navigateTo('contact');
+          else navigateTo('home');
+        });
+      });
+    }
+
+    initialLoad();
+  </script>
+</body>
+</html>
+```
